@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>DannG Dev Tic Tac Toe</title>
+</head>
+<body>
+    <div class="container">
+        <h1>DannG Dev </h1>
+        <h1 class="tittle">Tic Tac Toe</h1>
+        <div class="game">
+            <img src="./assets/line.png" alt="red line">
+            <div onclick="clicking(1)" class="slot one"></div>
+            <div onclick="clicking(2)"  class="slot two"></div>
+            <div onclick="clicking(3)"  class="slot three"></div>
+            <div onclick="clicking(4)"  class="slot four"></div>
+            <div onclick="clicking(5)"  class="slot five"></div>
+            <div onclick="clicking(6)"  class="slot six"></div>
+            <div onclick="clicking(7)" class="slot seven"></div>
+            <div onclick="clicking(8)" class="slot eigth"></div>
+            <div onclick="clicking(9)" class="slot nine"></div>
+        </div>
+        <p class="winner-message"></p>
+        <button onclick="restartGame(restartGame)" class="restart-button">RESTART</button>
+       
+        <div class="score">
+            <p class="gms-played">Total Games: <span class="games-played">0</span></p>
+            <p class="player">Player X Score: <span class="player-score">0</span></p>
+            <p class="computer">Player O Score: <span class="computer-score">0</span></p> 
+            <p class="draw">Draw Score: <span class="draw-score">0</span></p>
+        </div>
+    </div>
+</body>
+
+<script src="scripts.js"></script>
+</html>

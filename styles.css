@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://picsum.photos/1920/1080');
+    
+}
+
+
+.tittle {
+    margin-bottom: 15px;
+    font-size: 45px;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.game img {
+    position: absolute;
+    height: 12px;
+    background-color: red;
+    top: 0;
+    left: 0;
+    display: none;
+    pointer-events: none;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    position: relative;
+}
+
+.slot {
+    border: 5px solid black;
+    cursor: pointer;
+    font-size: 95px;
+    text-align: center;
+}
+
+.slot:hover {
+    background-color: rgb(213, 213, 213);
+}
+
+.slot:active {
+    opacity: 0.5;
+}
+
+.one {
+    border-left: none;
+    border-top: none;
+}
+
+.two {
+    border-top: none;
+}
+
+.three {
+    border-right: none;
+    border-top: none;
+}
+
+.four {
+    border-left: none;
+}
+
+.six {
+    border-right: none;
+}
+
+.seven {
+    border-left: none;
+    border-bottom: none;
+}
+
+.eigth {
+    border-bottom: none;
+}
+
+.nine {
+    border-right: none;
+    border-bottom: none;
+}
+
+button {
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: none;
+    background-color: rgb(42, 43, 42);
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.5;
+}
+button:active {
+    color: brown;
+    opacity: 0.8;
+}
+
+.winner-message {
+    color: red;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 40px;
+}
+
+.score {
+    margin-top: 25px;
+    font-size: 35px;
+}
+
+.games-played {
+    color: rgb(47, 77, 1);
+}
+
+.player-score {
+    color: blue;
+}
+    
+.computer-score {
+    color: red;
+}
+
+.draw-score {
+    color: darkorange;
+}
