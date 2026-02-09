@@ -13,6 +13,74 @@ body {
     
 }
 
+.game-mode {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.mode-select {
+    background: white;
+    padding: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+    border: 5px solid black;
+    animation: modalfade 0.3s ease;
+}
+
+.mode-select button {
+    margin: 10px;
+    width: 180px;
+    height: 50px;
+    font-size: 15px;
+}
+
+.mode-select h2 {
+    color: rgb(94, 1, 1);
+    font-size: 50px;
+}
+
+@keyframes modalFade {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes blinkLine {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+@keyframes glowLine {
+    0% {
+        box-shadow: 0 0 6px red;
+    }
+    50% {
+        box-shadow: 0 0 22px red;
+    }
+    100% {
+        box-shadow: 0 0 6px red;
+    }
+}
+
+.win-line-blink {
+    animation: blinkLine 0.8s infinite;
+}
+
+.win-line-glow {
+    animation: glowLine 1.2s infinite;
+}
+
 
 .tittle {
     margin-bottom: 15px;
@@ -38,6 +106,17 @@ body {
     left: 0;
     display: none;
     pointer-events: none;
+    z-index: 10;
+}
+
+@keyframes blinkline {
+    0% { opacity: 1; }
+    50% { opacity: 0.2; }
+    100% { opacity: 1; }
+}
+
+.win-line-blink {
+    animation: blinkline 0.8s infinite;
 }
 
 .game {
@@ -144,3 +223,58 @@ button:active {
 .draw-score {
     color: darkorange;
 }
+
+@media screen and  (width: 950px) {
+
+    body {
+        padding: 25px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+    
+
+    .game {
+        width: 90vw;
+        height: 90vw;
+        max-width: 360px;
+        max-height: 360px;
+        margin: 0 auto;
+        position: relative;
+        align-content: center;
+        justify-content: center;
+    }
+       
+        h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+        .game-mode {
+        padding: 20px;
+    }
+
+    .mode-select {
+        width: 90%;
+    }
+
+    .mode-select button {
+        width: 100%;
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+
+        .score p {
+        font-size: 0.9rem;
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .restart-button {
+        margin: 0;
+    }
+}
+
+
